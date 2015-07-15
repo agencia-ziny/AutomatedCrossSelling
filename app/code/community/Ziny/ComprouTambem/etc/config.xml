@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Comprou Também
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ *
+ * @category   Ziny
+ * @package    ComprouTambem
+ * @copyright  Copyright (c) 2015 Agência Ziny (www.agenciaziny.com.br)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author     Agência Ziny <dev@agenciaziny.com.br>
+ */
+-->
+<config>
+    <modules>
+        <Ziny_ComprouTambem>
+            <version>1.0.0</version>
+        </Ziny_ComprouTambem>
+    </modules>
+    <frontend>  
+        <layout>
+            <updates>
+                <comproutambem>
+                    <file>ziny/comproutambem.xml</file>
+                </comproutambem>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Ziny_ComprouTambem>
+                    <files>
+                        <default>Ziny_ComprouTambem.csv</default>
+                    </files>
+                </Ziny_ComprouTambem>
+            </modules>
+        </translate>
+    </adminhtml> 
+    <global> 
+        <models>
+            <ziny_comproutambem>
+                <class>Ziny_ComprouTambem_Model</class>
+            </ziny_comproutambem>
+        </models>			
+        <blocks>
+            <ziny_comproutambem>
+                <class>Ziny_ComprouTambem_Block</class>
+            </ziny_comproutambem>
+        </blocks>
+        <helpers>
+            <ziny_comproutambem>
+                <class>Ziny_ComprouTambem_Helper</class>
+            </ziny_comproutambem>
+        </helpers>
+    </global>
+    <default>
+        <catalog>
+            <comproutambem>
+                <ativo>1</ativo>
+                <titulo>Who bought, also bought</titulo>
+                <preco>1</preco>
+                <colunas>5</colunas>
+            </comproutambem>
+        </catalog>
+    </default>	
+</config>
