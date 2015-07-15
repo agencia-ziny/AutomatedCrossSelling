@@ -20,7 +20,7 @@
 <config>
     <tabs>
         <comproutambem translate="label">
-            <label>Bought Together</label>
+            <label>Automated Cross Selling</label>
             <sort_order>202</sort_order>
         </comproutambem>
     </tabs>
@@ -35,7 +35,7 @@
             <show_in_store>1</show_in_store>
             <groups>
                 <comproutambem translate="label">
-                    <label>Bought Together</label>
+                    <label>Automated Cross Selling</label>
                     <sort_order>9999</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
