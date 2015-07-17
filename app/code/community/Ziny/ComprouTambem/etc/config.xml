@@ -20,7 +20,7 @@
 <config>
     <modules>
         <Ziny_ComprouTambem>
-            <version>1.0.1</version>
+            <version>1.0.2</version>
         </Ziny_ComprouTambem>
     </modules>
     <frontend>  
