@@ -1,5 +1,5 @@
 # Magento extension: Automated Cross Selling
-### Magento: Your customers will be more informed and more confident in their purchase, immediately increasing sales.
+### Your customers will be more informed and more confident in their purchase, immediately increasing sales.
 
 Customers are also more likely to make a purchase decision when they see the path laid before them by other customers like themselves. "If it's good enough for her, then it's good enough for me!"
 
