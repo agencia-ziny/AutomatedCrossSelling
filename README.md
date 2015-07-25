@@ -1,4 +1,4 @@
-# Magento extension: Automated Cross Selling
+# [Magento extension: Automated Cross Selling](http://www.magentocommerce.com/magento-connect/automated-cross-selling.html)
 ### Your customers will be more informed and more confident in their purchase, immediately increasing sales.
 
 Customers are also more likely to make a purchase decision when they see the path laid before them by other customers like themselves. "If it's good enough for her, then it's good enough for me!"
@@ -24,7 +24,7 @@ By default the module retrieves the color patterns of your current theme.
 * ... and see on Production
 
 #### For more information, download and install
-Please see on **Magento Connect**
+Please see on [**Magento Connect**](http://www.magentocommerce.com/magento-connect/automated-cross-selling.html)
 
 ####Having Issues?
 
