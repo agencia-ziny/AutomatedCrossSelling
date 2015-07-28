@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Comprou TambÃ©m
+ * Comprou Também
  *
  * NOTICE OF LICENSE
  *
@@ -12,9 +12,9 @@
  *
  * @category   Ziny
  * @package    ComprouTambem
- * @copyright  Copyright (c) 2015 AgÃªncia Ziny (www.agenciaziny.com.br)
+ * @copyright  Copyright (c) 2015 Agência Ziny (www.agenciaziny.com.br)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- * @author     AgÃªncia Ziny <dev@agenciaziny.com.br>
+ * @author     Agência Ziny <dev@agenciaziny.com.br>
  */
 class Ziny_ComprouTambem_Block_Comproutambem extends Mage_Catalog_Block_Product_Abstract {
 
@@ -23,24 +23,9 @@ class Ziny_ComprouTambem_Block_Comproutambem extends Mage_Catalog_Block_Product_
         return parent::_prepareLayout();
     }
 
-    public function colunas() {
+    public function configura($var) {
 
-        return Mage::getStoreConfig('catalog/comproutambem/colunas');
-    }
-
-    public function preco() {
-
-        return Mage::getStoreConfig('catalog/comproutambem/preco');
-    }
-
-    public function titulo() {
-
-        return Mage::getStoreConfig('catalog/comproutambem/titulo');
-    }
-
-    public function ativo() {
-
-        return Mage::getStoreConfig('catalog/comproutambem/ativo');
+        return Mage::getStoreConfig('catalog/comproutambem/' . $var);
     }
 
     public function produtosComprados() {
@@ -62,6 +47,7 @@ class Ziny_ComprouTambem_Block_Comproutambem extends Mage_Catalog_Block_Product_
             $collection->addAttributeToFilter('status', 1)->addStoreFilter();
 
             Mage::getSingleton('catalog/product_status')->addVisibleFilterToCollection($collection);
+            
             $attributes = Mage::getSingleton('catalog/config')->getProductAttributes();
             $collection->addAttributeToSelect($attributes)
                     ->addMinimalPrice()

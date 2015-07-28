@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Comprou TambÃ©m
+ * Comprou Também
  *
  * NOTICE OF LICENSE
  *
@@ -12,9 +12,9 @@
  *
  * @category   Ziny
  * @package    ComprouTambem
- * @copyright  Copyright (c) 2015 AgÃªncia Ziny (www.agenciaziny.com.br)
+ * @copyright  Copyright (c) 2015 Agência Ziny (www.agenciaziny.com.br)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- * @author     AgÃªncia Ziny <dev@agenciaziny.com.br>
+ * @author     Agência Ziny <dev@agenciaziny.com.br>
  */
 -->
 <config>
@@ -49,32 +49,60 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </ativo>                        
-                        <titulo translate="label">
-                            <label>Title</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>3</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </titulo>
-                        <preco translate="label">
-                            <label>Display Price</label>
+                        </ativo>
+                        <estilos translate="label comment">
+                            <label>Active Style</label>
+                            <comment>Enable this option only if the module layout does not work in your store.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </preco>
+                        </estilos>                        
+                        <titulo translate="label">
+                            <label>Label Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </titulo>                        
                         <colunas translate="label">
-                            <label>Total of Products to Show</label>  
+                            <label>Block Number of Columns</label>  
                             <frontend_type>text</frontend_type>                          
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </colunas>
+                        <preco translate="label">
+                            <label>Display Price</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </preco>
+                        <desejos translate="label">
+                            <label>Display Wishlist Link</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </desejos>
+                        <compara translate="label">
+                            <label>Display Compare Link</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </compara>
                     </fields>
                 </comproutambem>
             </groups>

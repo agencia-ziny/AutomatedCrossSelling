@@ -1,6 +1,6 @@
 <?php
 /**
- * Comprou TambÃ©m
+ * Comprou Também
  *
  * NOTICE OF LICENSE
  *
@@ -11,31 +11,40 @@
  *
  * @category   Ziny
  * @package    ComprouTambem
- * @copyright  Copyright (c) 2015 AgÃªncia Ziny (www.agenciaziny.com.br)
+ * @copyright  Copyright (c) 2015 Agência Ziny (www.agenciaziny.com.br)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- * @author     AgÃªncia Ziny <dev@agenciaziny.com.br>
+ * @author     Agência Ziny <dev@agenciaziny.com.br>
  */
 $produtos = $this->produtosComprados();
 ?>
-<?php if ($this->ativo() && count($produtos)): ?>
+<?php if ($this->configura('ativo') && count($produtos)): ?>
     <div class="box-collateral box-up-sell">
-        <h2><?php echo $this->titulo(); ?></h2>
-        <ul class="products-grid products-grid--max-<?php echo $this->colunas(); ?>-col" id="upsell-product-table">
+        <h2><?php echo $this->configura('titulo'); ?></h2>
+        <ul class="products-grid products-grid--max-<?php echo $this->configura('colunas'); ?>-col" id="upsell-product-table">
             <?php foreach ($produtos as $_index => $_item): ?>
                 <li>
                     <a href="<?php echo $_item->getProductUrl(); ?>" class="product-image">
                         <img src="<?php echo $this->helper('catalog/image')->init($_item, 'small_image')->resize(280); ?>" alt="<?php echo $this->htmlEscape($_item->getName()); ?>" />
                     </a>
                     <h3 class="product-name"><a href="<?php echo $_item->getProductUrl(); ?>"><?php echo $this->htmlEscape($_item->getName()); ?></a></h3>
-                    <?php if ($this->preco()): ?>
+                    <?php if ($this->configura('preco')): ?>
                         <?php echo $this->getPriceHtml($_item); ?>
-                    <?php endif; ?>
-                    <?php if ($this->helper('wishlist')->isAllow()): ?>
-                        <a href="<?php echo $this->getAddToWishlistUrl($_item); ?>" class="link-cart"><?php echo $this->__('Add to Wishlist'); ?></a>
-                    <?php endif; ?>
+                    <?php endif; ?>                    
                     <?php if ($_item->isSaleable()): ?>
                         <div class="clear"></div>
-                        <a href="<?php echo $this->getAddToCartUrl($_item); ?>" class="link-cart"><?php echo $this->__('Add to Cart'); ?></a>
+                        <p class="action">
+                            <button type="button" title="<?php echo $this->quoteEscape($this->__('Add to Cart')); ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_item); ?>')">
+                                <span>
+                                    <span><?php echo $this->__('Add to Cart'); ?></span>
+                                </span>
+                            </button>
+                        </p>
+                    <?php endif; ?>
+                    <?php if ($this->helper('wishlist')->isAllow() && $this->configura('desejos')) : ?>
+                        <p class="action"><a href="<?php echo $this->helper('wishlist')->getAddUrl($_item); ?>" class="link-wishlist"><?php echo $this->__('Add to Wishlist'); ?></a></p>
+                    <?php endif; ?>
+                    <?php if (($_compareUrl = $this->getAddToCompareUrl($_item)) && $this->configura('compara')): ?>
+                        <p class="action"><a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo $this->__('Add to Compare'); ?></a></p>
                     <?php endif; ?>
                 </li>        
             <?php endforeach; ?>

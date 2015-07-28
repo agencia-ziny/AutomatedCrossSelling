@@ -1,0 +1,59 @@
+#upsell-product-table {
+    position: relative;
+}
+#upsell-product-table > li {
+    float:left;
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 30.8642%;
+    margin-right: 3.7037%;
+}
+#upsell-product-table.products-grid--max-6-col > li {
+    width: 14.81481%;
+    margin-right: 2.22222%;
+}
+#upsell-product-table.products-grid--max-5-col > li {
+    width: 18.22222%;
+    margin-right: 2.22222%;
+}
+#upsell-product-table.products-grid--max-4-col > li {
+    width: 23.33333%;
+    margin-right: 2.22222%;
+}
+#upsell-product-table.products-grid--max-3-col > li {
+    width: 30.8642%;
+    margin-right: 3.7037%;
+}
+#upsell-product-table.products-grid--max-6-col > li:nth-child(6n+1) {
+    clear: left;
+}
+#upsell-product-table.products-grid--max-5-col > li:nth-child(5n+1) {
+    clear: left;
+}
+#upsell-product-table.products-grid--max-4-col > li:nth-child(4n+1) {
+    clear: left;
+}
+#upsell-product-table > li:nth-child(3n+1) {
+    clear: left;
+}
+#upsell-product-table .product-image {
+    margin-bottom: 5px;
+}
+#upsell-product-table .product-image {
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    display: block;
+    border: 1px solid #ededed;
+}
+#upsell-product-table .product-image:hover {
+    border-color: #3399cc;
+}
+.products-grid--max-5-col > li:last-child {
+    margin-right: 0;
+}
+#upsell-product-table .product-image img {
+    width: 100%;
+    height: auto;
+}
