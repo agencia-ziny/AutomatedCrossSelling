@@ -11,15 +11,17 @@ By default the module retrieves the color patterns of your current theme.
 
 #### Settings Options
 
-* Easy to Enable and Disable
-* Hide or Show Product Price
+* Easy to Enable/Disable
 * Change Label Title
-* Change Total Products to Show
+* Hide or Show Product Price
+* Hide or Show Product Compare
+* Hide or Show Product Wishlist
+* Change Block Total  Collunms to Show
 
 #### Install Automated Cross Selling
 
 * Install Automated Cross Selling Magento extension on Magento Connect
-* Enable the Module on your Settings
+* Enable the Module on your Catalog Settings
 * Clear the Store Cache
 * ... and see on Production
 
