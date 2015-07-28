@@ -16,7 +16,7 @@ By default the module retrieves the color patterns of your current theme.
 * Hide or Show Product Price
 * Hide or Show Product Compare
 * Hide or Show Product Wishlist
-* Change Block Total  Collunms to Show
+* Change Block Total  Columns to Show
 
 #### Install Automated Cross Selling
 
