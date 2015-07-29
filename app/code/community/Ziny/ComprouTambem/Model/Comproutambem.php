@@ -18,6 +18,18 @@
  */
 class Ziny_ComprouTambem_Model_Comproutambem extends Mage_Core_Model_Abstract {
 
+    public function toOptionArray() {
+        
+        return array(
+            array(
+                'value' => 'left',
+                'label' => 'Fixado na Esquerda'),
+            array(
+                'value' => 'right',
+                'label' => 'Fixado na Direita'),
+        );
+    }
+
     public function getProductBought($productid) {
 
         $product = $this->getProduct($productid);
@@ -49,7 +61,7 @@ class Ziny_ComprouTambem_Model_Comproutambem extends Mage_Core_Model_Abstract {
             $_productId[] = $_productData->getProductId();
             $_productOption[] = $_productData->getProductOptions();
         }
-        
+
         foreach ($_productOption as $productOptions) {
 
             if (array_key_exists('super_product_config', $productOptions['info_buyRequest'])) {

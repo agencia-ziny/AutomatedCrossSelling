@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Comprou Também
+ * Comprou TambÃ©m
  *
  * NOTICE OF LICENSE
  *
@@ -12,15 +12,15 @@
  *
  * @category   Ziny
  * @package    ComprouTambem
- * @copyright  Copyright (c) 2015 Agência Ziny (www.agenciaziny.com.br)
+ * @copyright  Copyright (c) 2015 AgÃªncia Ziny (www.agenciaziny.com.br)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- * @author     Agência Ziny <dev@agenciaziny.com.br>
+ * @author     AgÃªncia Ziny <dev@agenciaziny.com.br>
  */
 -->
 <config>
     <modules>
         <Ziny_ComprouTambem>
-            <version>1.0.3</version>
+            <version>1.0.5</version>
         </Ziny_ComprouTambem>
     </modules>
     <frontend>  
@@ -42,6 +42,37 @@
                 </Ziny_ComprouTambem>
             </modules>
         </translate>
+        <layout>
+            <updates>
+                <comproutambem>
+                    <file>ziny/comproutambem.xml</file>
+                </comproutambem>
+            </updates>
+        </layout>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <Ziny_ComprouTambem>
+                            <title>Automated Cross Selling</title>
+                            <sort_order>202</sort_order>
+                        </Ziny_ComprouTambem>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <comproutambem translate="title" module="comproutambem">
+                                            <title>Automated Cross Selling</title>
+                                            <sort_order>202</sort_order>
+                                        </comproutambem>			
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
     </adminhtml> 
     <global> 
         <models>
@@ -63,14 +94,26 @@
     <default>
         <catalog>
             <comproutambem>
-                <ativo>0</ativo>
+                <ativo>1</ativo>
                 <estilos>0</estilos>
                 <titulo>Who bought, also bought</titulo>
                 <colunas>5</colunas>
+                <visibilidade>4</visibilidade>
                 <preco>1</preco>
                 <desejos>1</desejos>
-                <compara>1</compara>              
+                <compara>1</compara>
             </comproutambem>
         </catalog>
-    </default>	
+    </default>
+    <admin>
+        <routers>
+            <comproutambem>
+                <use>admin</use>
+                <args>
+                    <module>Ziny_ComprouTambem</module>
+                    <frontName>comproutambem</frontName>
+                </args>
+            </comproutambem>
+        </routers>
+    </admin>
 </config>
