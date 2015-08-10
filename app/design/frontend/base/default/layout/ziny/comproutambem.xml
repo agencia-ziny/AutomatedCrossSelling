@@ -17,7 +17,7 @@
  * @author     Agência Ziny <dev@agenciaziny.com.br>
  */
 -->
-<layout version="1.0.5">
+<layout version="1.0.6">
     <default>
         <reference name="head">
             <action method="addItem" ifconfig="catalog/comproutambem/estilos">

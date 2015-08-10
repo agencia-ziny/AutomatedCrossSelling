@@ -19,15 +19,15 @@
 -->
 <config>
     <tabs>
-        <comproutambem translate="label">
-            <label>Automated Cross Selling</label>
+       <ziny translate="label">
+            <label>Ziny Extensions</label>
             <sort_order>202</sort_order>
-        </comproutambem>
+        </ziny>
     </tabs>
     <sections>
         <catalog translate="label" module="comproutambem">
-            <label>Settings</label>
-            <tab>comproutambem</tab>
+            <label>Automated Cross Selling</label>
+            <tab>ziny</tab>
             <frontend_type>text</frontend_type>
             <sort_order>1</sort_order>
             <show_in_default>1</show_in_default>
